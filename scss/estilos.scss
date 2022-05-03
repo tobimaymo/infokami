@@ -1,0 +1,142 @@
+header {
+    nav {
+        ul {
+            list-style: none;
+            background-color: red;
+            color: white;
+            border: 3px solid black;
+            border-radius: 10px;
+            li {
+                display: inline-block;
+                text-align: center;
+                font-size: 30px;
+                margin-right: 40px;
+                margin-bottom: 5px;
+                padding: 15px;
+                img {
+                    width: 50px;
+                    height: 48px;
+                }
+                a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                color: gray
+                    }
+                }
+            }  
+        }
+    }
+    div {
+        nav {
+            p {
+                background-color: darkgrey;
+                padding: 20px;
+                color: black;
+                border: 3px solid black;
+                font-size: 25px;
+                }
+            }
+    }  
+}
+.container {
+    width: 500px;
+    height: 350px;
+    border: 5px solid black;
+    margin: 5px;
+    background-color: #191919;
+    margin-bottom: 20px;
+  }
+.box {
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+    height: 200px;
+    margin: 5px;
+  }
+.content {
+    display: inline-block;
+    vertical-align: top;
+}
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+main{
+    div {
+        div {
+            div {
+                p {
+                    font-size: 21px;
+                    color: white;
+                    text-align: start;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {
+    box-shadow: $x-axis $y-axis $blur $color;
+  }
+  
+.box-shadow {
+    width: 510px;
+    height: 360px; 
+    background: #333;
+    @include box-shadow(5px, 5px, 5px, #333)
+}
+
+.grid {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.imgnoticia {
+    width: 485px;
+    height: 200px;
+    border: 3px solid black;
+}
+
+.container2 {
+    @extend .container;
+    width: 800px;
+    height: 500px;
+}
+.box2 {
+    @extend .box;
+    width: 785x;
+    height: 380px;
+}
+.imgnoticia2 {
+    @extend .imgnoticia;
+    width: 785px;
+    height: 380px;
+}
+.grid2 {
+    @extend .grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 20px;
+}
+
+footer {
+    div {
+        ul{
+            background-color: #191919;
+            list-style: none;
+            padding: 20px;
+            li {
+                display: inline;
+                padding-right: 25px;
+                color: white;
+                font-size: 15px;
+            }
+        }
+
+    }
+}
